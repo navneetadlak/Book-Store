@@ -10,13 +10,11 @@ const BookDetails = ({ book }) => {
     publisher,
     publishedDate,
   } = volumeInfo;
-  const { buyLink, country, listPrice } = saleInfo;
+  const { country } = saleInfo;
 
   return (
     <>
-      <p>Categories: {categories}</p>
-      {/* <p>Price: {listPrice.amount}</p>
-      <a href={buyLink}>buyLink</a> */}
+      <p>Genre: {categories}</p>
       <p>Language: {language}</p>
       <p>Country: {country}</p>
       <p>Description: {description}</p>

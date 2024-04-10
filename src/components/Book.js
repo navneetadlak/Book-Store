@@ -15,19 +15,17 @@ const Book = ({ book }) => {
     setShowDetails(!showDetails);
   };
   return (
-    <>
-      <div>
-        <img src={imageLinks?.smallThumbnail} alt={title} />
-        <h2>{title}</h2>
-        <p>Author: {authors?.join(", ")}</p>
-        <p>Rating: {averageRating}</p>
-        <button onClick={handleShowDetails}>
-          {showDetails ? "Hide Description" : "Show Description"}
-        </button>
+    <div>
+      <img src={imageLinks?.smallThumbnail} alt={title} />
+      <h2>{title}</h2>
+      <p>Author: {authors?.join(", ")}</p>
+      <p>Rating: {averageRating}</p>
+      <button onClick={handleShowDetails}>
+        {showDetails ? "Hide Description" : "Show Description"}
+      </button>
 
-        {showDetails && <BookDetails book={book} />}
-      </div>
-    </>
+      {showDetails && <BookDetails book={book} />}
+    </div>
   );
 };
 
