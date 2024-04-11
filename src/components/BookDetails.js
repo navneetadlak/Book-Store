@@ -2,6 +2,7 @@ import React from "react";
 
 const BookDetails = ({ book }) => {
   const { volumeInfo, saleInfo } = book;
+  // destructuring variables values
   const {
     language,
     categories,
@@ -17,10 +18,12 @@ const BookDetails = ({ book }) => {
       <p>Genre: {categories}</p>
       <p>Language: {language}</p>
       <p>Country: {country}</p>
-      <p>Description: {description}</p>
+      <p className="text-left overflow-hidden">Description: {description}</p>
       <p>Page Count: {pageCount}</p>
-      <p>Publisher: {publisher}</p>
-      <p>Published Date: {publishedDate}</p>
+      <p className="underline decoration-orange-500">Publisher: {publisher}</p>
+      <p className="underline decoration-orange-500">
+        Published Date: {publishedDate}
+      </p>
     </>
   );
 };
